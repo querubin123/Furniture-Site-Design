@@ -1,4 +1,4 @@
-#Furniture Webpage Design
+# Furniture Webpage Design
 
 This is a simple website showcasing a curated collection of furniture pieces. Built using HTML, CSS, and Sass, this website offers a clean and elegant browsing experience for users.
 
