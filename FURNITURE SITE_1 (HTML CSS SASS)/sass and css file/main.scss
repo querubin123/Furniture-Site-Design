@@ -1,0 +1,1056 @@
+@import "reset";
+
+@mixin background($background) {
+  background: $background;
+}
+@mixin color($color) {
+  color: $color;
+}
+@mixin bgsize($height1, $width1) {
+  height: $height1;
+  width: $width1;
+}
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  @include bgsize(auto, 100%);
+}
+// 1st header
+.container1 {
+  @include flexbox;
+  @include background(rgba(254, 206, 61, 0.8));
+  padding: 8px;
+  cursor: pointer;
+  .header {
+    @include bgsize(100%, 100%);
+    flex-wrap: wrap;
+    @include background(rgba(255, 255, 255, 0.3));
+    transition: background 0.2s linear;
+  }
+  .header:hover {
+    @include background(rgba(255, 255, 255, 1));
+  }
+  p {
+    display: block;
+    font: {
+      family: Cambria;
+      size: 18px;
+      weight: bolder;
+    }
+    @include color(rgb(255, 0, 0));
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+// 2nd header
+.container2 {
+  @include flexbox;
+  flex-wrap: wrap;
+  flex: 1;
+  @include background(rgb(250, 198, 39));
+  padding: 15px;
+
+  .logo {
+    @include bgsize(60px, 180px);
+    margin: auto 0;
+    cursor: pointer;
+  }
+  .header1 {
+    @include flexbox;
+    flex-wrap: wrap;
+    position: relative;
+
+    .dropdown {
+      position: relative;
+      @include flexbox;
+      justify-content: flex-start;
+      @include bgsize(40px, 250px);
+      @include background(#fff);
+      // margin-right: 20px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    h2 {
+      display: block;
+      padding-left: 20px;
+    }
+    .fa-solid {
+      position: absolute;
+      right: 20px;
+    }
+  }
+  .header1:hover .list {
+    opacity: 1;
+    visibility: visible;
+  }
+  .list {
+    @include bgsize(auto, 250px);
+    @include background(#fff);
+    position: absolute;
+    left: 0;
+    top: 50px;
+    display: block;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s linear, visibility 0.15s linear;
+
+    .dropdown-submenu {
+      width: 100%;
+      position: relative;
+    }
+    a {
+      display: block;
+      @include color(#000);
+      font: {
+        size: 13px;
+        weight: bold;
+      }
+      text-transform: capitalize;
+      padding: 4px 12px;
+      margin: 10px 0;
+    }
+  }
+
+  .search {
+    @include bgsize(40px, 350px);
+    @include background(#fff);
+    position: relative;
+    margin-left: 20px;
+
+    input {
+      border: none;
+      outline: none;
+      @include bgsize(100%, 100%);
+      vertical-align: middle;
+      font-size: 13px;
+      padding-left: 20px;
+    }
+    input,
+    input::placeholder {
+      @include color(rgb(127, 111, 111));
+    }
+    input::placeholder {
+      text-transform: capitalize;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-size: 13px;
+      @include background(red);
+      @include color(#fff);
+      cursor: pointer;
+    }
+  }
+  .cart {
+    display: flex;
+    margin-left: 20px;
+    button {
+      @include bgsize(40px, 160px);
+      @include background(rgba(254, 206, 61, 0.8));
+      margin: auto 3px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.15s linear;
+    }
+    span {
+      @include background(rgba(255, 196, 18, 0.8));
+      padding: 4px 9px;
+      border-radius: 50%;
+      font: {
+        size: 15px;
+        weight: bolder;
+      }
+      margin-left: 5px;
+    }
+    button:hover {
+      @include background(rgb(255, 230, 155));
+    }
+  }
+}
+// 3rd header
+.container3 {
+  @include flexbox;
+  @include background(#fff);
+  flex: 1;
+  flex-wrap: wrap;
+}
+nav {
+  ul {
+    @include flexbox;
+    list-style: none;
+    li {
+      margin-right: 25px;
+      position: relative;
+      a {
+        display: block;
+        @include color(#000);
+        font: {
+          family: Arial;
+          size: 0.8rem;
+          weight: 700;
+        }
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        padding: 15px;
+        transition: background-color 0.15s;
+      }
+      a:hover {
+        background-color: (rgb(255, 230, 155));
+      }
+    }
+  }
+}
+.dropdown1,
+.dropdown2 {
+  display: none;
+}
+nav {
+  ul {
+    li:hover {
+      .dropdown1 {
+        display: block;
+        position: absolute;
+        background: #fff;
+        width: 145px;
+        left: 0;
+        z-index: 20;
+      }
+      .dropdown1 ul {
+        display: block;
+        list-style: none;
+      }
+      .dropdown1 ul li {
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .dropdown1 ul li a label {
+        font: {
+          family: Arial;
+          size: 0.8rem;
+          weight: 700;
+        }
+        cursor: pointer;
+      }
+      .dropdown1 ul li a input[type="checkbox"] {
+        margin: auto 15px;
+        -webkit-appearance: none;
+        appearance: none;
+        @include bgsize(14px, 14px);
+        @include background(#fff);
+        border-radius: 8px;
+        border: 2px solid rgb(245, 167, 115);
+        vertical-align: text-bottom;
+        outline: none;
+      }
+      .dropdown1 ul li a input[type="checkbox"]::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f111";
+        font: {
+          size: 8px;
+          weight: 700;
+        }
+        @include color(rgb(255, 115, 0));
+        @include flexbox;
+        padding: 1px;
+        display: none;
+      }
+      .dropdown1 ul li a input[type="checkbox"]:checked::after {
+        display: block;
+      }
+    }
+  }
+}
+nav {
+  ul {
+    li:hover {
+      .dropdown2 {
+        @extend .dropdown1;
+        width: 225px;
+      }
+      .dropdown2 ul {
+        display: block;
+        list-style: none;
+      }
+      .dropdown2 ul li {
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .dropdown2 ul li a {
+        padding-left: 30px;
+      }
+      span {
+        @include bgsize(20px, 20px);
+        @include background(rgb(255, 115, 0));
+        @include color(#fff);
+        font: {
+          family: sans-serif;
+          size: 0.5rem;
+          weight: 700;
+        }
+        padding: 4px;
+        margin: auto 7px;
+        border-radius: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+// header banner
+.banner {
+  @include bgsize(55vh, auto);
+  position: relative;
+  img {
+    @include bgsize(100%, 100%);
+  }
+  .banner-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include bgsize(100%, 100%);
+    @include flexbox;
+    flex-direction: column;
+
+    h1,
+    h3 {
+      @include color(rgb(255, 166, 0));
+      text: {
+        transform: uppercase;
+        align: center;
+      }
+      font: {
+        family: Verdana;
+        size: 55px;
+      }
+      text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+    }
+    h3 {
+      width: 60%;
+      margin-top: 25px;
+      font-size: 18px;
+      line-height: 1.5;
+      @include color(rgb(255, 182, 47));
+    }
+  }
+}
+// section
+.feature1 {
+  @include bgsize(auto, 90%);
+  margin: 0 auto;
+  text-align: center;
+
+  p {
+    font: {
+      family: sans-serif;
+      size: 23px;
+      weight: bold;
+    }
+    text-transform: uppercase;
+    padding-top: 60px;
+  }
+  .container {
+    @include flexbox;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+    .container-sale {
+      @include bgsize(240px, 50%);
+      object-fit: cover;
+
+      img {
+        @include bgsize(100%, 100%);
+        cursor: pointer;
+        transition: opacity 0.15s linear;
+      }
+      img:hover {
+        opacity: 0.8;
+      }
+      .p1 {
+        @include color(rgb(50, 47, 47));
+        margin: -53px 25px;
+        width: 75%;
+        text-align: left;
+        font: {
+          family: Arial;
+          size: 18px;
+          weight: bold;
+        }
+        text-transform: none;
+        cursor: pointer;
+      }
+      .p2 {
+        @extend .p1;
+        font-size: 16px;
+        margin-top: -55px;
+      }
+      button {
+        outline: none;
+        border: 1px solid black;
+        font-size: 13px;
+        padding: 9px 13px;
+        border-radius: 2px;
+        background: transparent;
+        float: left;
+        margin: 64px 26px;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      button:hover {
+        background: rgb(51, 51, 51);
+        color: #fff;
+      }
+    }
+  }
+}
+.feature2 {
+  @extend .feature1;
+  padding-top: 105px;
+  .container-sale1 {
+    @include bgsize(390px, 50%);
+    margin-bottom: 50px;
+    object-fit: cover;
+    position: relative;
+    img {
+      @include bgsize(100%, 100%);
+      border: 1px solid rgb(218, 218, 218);
+      border-bottom: none;
+      cursor: pointer;
+
+      display: block;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include background(rgba(250, 198, 39, 0.6));
+      opacity: 0;
+      transition: opacity 0.2s linear;
+    }
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 90%);
+      button {
+        outline: none;
+        border: none;
+        @include background(white);
+        @include color(#000);
+        font-family: sans-serif;
+        border-radius: 2px;
+        padding: 13px 24px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+    }
+    .overlay:hover {
+      opacity: 1;
+    }
+  }
+}
+.label {
+  padding: 18px;
+  border: 1px solid rgb(218, 218, 218);
+
+  h5 {
+    font-family: Arial;
+    text-transform: capitalize;
+    font-weight: bolder;
+  }
+}
+.feature3 {
+  @extend .feature2;
+  @include flexbox;
+  padding-top: 80px;
+  img {
+    @include bgsize(300px, 100%);
+  }
+  .label1 {
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+  }
+  .label1 p {
+    padding: 10px 0;
+    float: left;
+    color: rgb(86, 81, 81);
+    line-height: 25px;
+    font: {
+      family: Arial;
+      size: 15px;
+    }
+    text-transform: none;
+
+    span {
+      display: block;
+      margin: 4px auto;
+      color: #000;
+      font: {
+        family: Arial;
+        size: 20px;
+      }
+      text-transform: uppercase;
+    }
+  }
+  button {
+    outline: none;
+    border: 1px solid black;
+    font-size: 13px;
+    padding: 9px 13px;
+    border-radius: 2px;
+    background: transparent;
+    float: left;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  button:hover {
+    background: rgb(51, 51, 51);
+    color: #fff;
+  }
+}
+.feature4 {
+  @extend .feature1;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 100px 15px;
+    @include bgsize(auto, auto);
+    margin-top: 30px;
+  }
+  .grid-content {
+    @include bgsize(200px, 100%);
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include bgsize(100%, 100%);
+      @include background(rgba(250, 198, 39, 0.6));
+      opacity: 0;
+      cursor: pointer;
+      transition: opacity 0.2s linear;
+    }
+    .overlay:hover {
+      opacity: 1;
+    }
+    .overlay-icons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include bgsize(40%, 90%);
+      @include flexbox;
+      justify-content: space-around;
+    }
+    .overlay-icons > .fa-solid {
+      display: block;
+      font-size: 25px;
+      @include color(white);
+      cursor: pointer;
+    }
+    .overlay-icons p {
+      display: block;
+      font: {
+        family: Arial;
+        size: 12px;
+      }
+      padding: 0 1px;
+      margin-top: 10px;
+      text-transform: capitalize;
+    }
+  }
+  img {
+    @include bgsize(100%, 100%);
+    cursor: pointer;
+  }
+  .sale {
+    @include bgsize(auto, auto);
+    background: red;
+    p {
+      padding: 5px;
+      font: {
+        size: 19px;
+        weight: bold;
+      }
+      @include color(white);
+    }
+  }
+  .container-label {
+    @include bgsize(25%, auto);
+    @include flexbox;
+    p {
+      padding: 0;
+      position: absolute;
+      font: {
+        family: Arial;
+        size: 14px;
+        weight: bold;
+      }
+      text-transform: capitalize;
+      margin-top: 3px;
+    }
+    span {
+      @include color(red);
+      @include background(rgb(255, 182, 47));
+      border-radius: 3px;
+      padding: 5px;
+      margin: auto 8px;
+      font: {
+        family: Arial;
+        size: 14px;
+        weight: bold;
+      }
+    }
+  }
+}
+.feature5 {
+  @extend .feature4;
+  padding-top: 70px;
+}
+.feature6 {
+  @include bgsize(auto, 90%);
+  @extend .feature5;
+  padding: 0;
+  margin-top: -25px;
+  p {
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .img-container {
+    @include bgsize(auto, auto);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative;
+  }
+  img {
+    @include bgsize(300px, 100%);
+    display: block;
+  }
+  .img3 {
+    @include bgsize(500px, 203.6%);
+  }
+}
+.feature7 {
+  @extend .feature6;
+  margin-top: 120px;
+  .main-carousel {
+    display: block;
+    margin: 30px auto;
+    @include bgsize(300px, 100%);
+    overflow: hidden;
+    .carousel-cell {
+      @include bgsize(100%, 40%);
+      object-fit: cover;
+      position: relative;
+      padding-bottom: 70px;
+    }
+  }
+  .carousel-cell {
+    @include flexbox;
+  }
+  blockquote {
+    @include flexbox;
+    flex-direction: column;
+    @include background(#f7f7f7);
+    @include color(rgb(68, 6, 23));
+    margin-right: 30px;
+    margin-top: 80px;
+    padding: 90px;
+    overflow: hidden;
+    white-space: wrap;
+
+    .fa-quote-left {
+      font-size: 40px;
+      @include color(black);
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+    .fa-quote-right {
+      font-size: 40px;
+      @include color(black);
+      position: absolute;
+      bottom: 15px;
+      right: 45px;
+    }
+    .b-icons {
+      @include flexbox;
+      margin: 15px;
+
+      .fa-solid,
+      .fa-regular {
+        font: {
+          size: 24px;
+        }
+        @include color(orange);
+        margin-right: 7px;
+      }
+    }
+    p {
+      width: 135%;
+      word-wrap: break-word;
+      font: {
+        family: "Nanum Gothic";
+        size: 14px;
+        weight: lighter;
+      }
+      text-transform: lowercase;
+      @include color(black);
+    }
+    img {
+      @include bgsize(50px, 50px);
+      object-fit: cover;
+      position: absolute;
+      top: 40px;
+      right: 15px;
+      transform: translate(-50%, -50%);
+    }
+    .c1 {
+      font: {
+        weight: bold;
+        size: 14px;
+      }
+    }
+    .c2 {
+      font: {
+        size: 11px;
+        weight: bold;
+      }
+      @include color(orange);
+      margin-top: 6px;
+    }
+  }
+}
+.feature8 {
+  margin: 80px 0;
+  .icons {
+    @include flexbox;
+  }
+  .icons-container {
+    @include flexbox;
+    flex-direction: column;
+    margin: auto 60px;
+  }
+  .fa-solid {
+    @include color(rgb(68, 6, 23));
+    font: {
+      size: 35px;
+      weight: bold;
+    }
+  }
+  p {
+    margin-top: 15px;
+    font: {
+      family: Arial;
+      size: 17px;
+      weight: bold;
+    }
+    @include color(rgb(68, 6, 23));
+    text-transform: capitalize;
+  }
+  .sub-label {
+    margin-top: 7px;
+    font: {
+      size: 14px;
+      weight: lighter;
+    }
+  }
+}
+.feature9 {
+  margin: 40px auto;
+  @include bgsize(auto, 90%);
+  @include flexbox;
+  justify-content: space-evenly;
+
+  img {
+    @include bgsize(100%, 200px);
+  }
+}
+
+.feature10 {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  .sctop {
+    @include bgsize(50px, 50px);
+    @include background(rgba(255, 115, 0, 0.6));
+    border-radius: 50%;
+    @include flexbox;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+  .sctop.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .sctop:hover {
+    @include background(rgb(255, 115, 0));
+  }
+  .fa-solid {
+    font-size: 23px;
+    @include color(white);
+  }
+}
+// footer
+footer {
+  @include background(rgb(250, 198, 39));
+  padding: 25px;
+  .footer-icons {
+    @include flexbox;
+    width: auto;
+    margin-top: 20px;
+    gap: 40px;
+
+    .fa-brands {
+      font: {
+        size: 22px;
+        weight: bold;
+      }
+      @include color(red);
+      @include background(rgba(255, 255, 255, 0.7));
+      border-radius: 50%;
+      padding: 9px 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: background 0.1s linear;
+    }
+    .fa-brands:hover {
+      @include background(rgba(255, 255, 255, 1));
+    }
+  }
+  .footer-div {
+    display: inline-block;
+    p {
+      font: {
+        family: sans-serif;
+        size: 17px;
+        weight: bold;
+      }
+      text-transform: capitalize;
+    }
+
+    ul {
+      list-style: none;
+      float: left;
+    }
+    ul,
+    p {
+      margin: 10px 24px;
+    }
+    li {
+      margin-right: 20px;
+    }
+    li,
+    a {
+      display: block;
+    }
+    a {
+      padding: 6px 0;
+      font: {
+        family: "Nanum Gothic";
+        size: 14px;
+        weight: 400;
+      }
+      @include color(rgba(0, 0, 0, 1));
+      text-transform: capitalize;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .fa-solid {
+      @include flexbox;
+      justify-content: flex-start;
+      flex: 1;
+      flex-wrap: wrap;
+      @include color(rgb(68, 6, 23));
+      margin-bottom: 10px;
+
+      a {
+        margin-left: 10px;
+      }
+      .email,
+      .globe {
+        text-transform: lowercase;
+      }
+      .location {
+        text-transform: capitalize;
+      }
+    }
+    .newsletter {
+      position: relative;
+      display: block;
+      margin-bottom: 30px;
+      outline: none;
+      @include bgsize(50px, 500px);
+      @include background(rgba(0, 0, 0, 1));
+      input {
+        @include bgsize(100%, 100%);
+        background: none;
+        outline: none;
+        border: none;
+        font-size: 13px;
+        padding: 15px;
+        @include color(white);
+      }
+      input::placeholder {
+        @include color(rgba(255, 255, 255, 0.7));
+        letter-spacing: 1px;
+      }
+      button {
+        outline: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding: 15px;
+        cursor: pointer;
+        font: {
+          family: sans-serif;
+          weight: bolder;
+          size: 12px;
+        }
+        letter-spacing: 2px;
+        @include background(black);
+        @include color(white);
+        text-transform: uppercase;
+        transition: background 0.15s ease-in;
+      }
+      button:hover {
+        @include background(rgba(255, 0, 0, 0.7));
+      }
+    }
+    .search {
+      @extend .newsletter;
+      @include bgsize(50px, auto);
+      @include background(white);
+      margin-right: 180px;
+
+      input {
+        @include color(black);
+      }
+      input::placeholder {
+        @include color(black);
+      }
+      button {
+        @include background(white);
+        @include color(black);
+        transition: background 0.15s ease-in, color 0.15s ease-in;
+      }
+      button:hover {
+        @include color(white);
+      }
+    }
+  }
+  hr {
+    @include bgsize(1px, auto);
+    @include background(white);
+    border: none;
+  }
+  .payment {
+    // display: block;
+    margin: 30px 25px;
+
+    p {
+      padding-bottom: 10px;
+      font: {
+        size: 10px;
+        weight: bold;
+      }
+      text-transform: capitalize;
+    }
+    .fa-brands,
+    .fab {
+      cursor: pointer;
+      padding-right: 15px;
+      font-size: 45px;
+      @include color(rgb(68, 6, 23));
+    }
+  }
+  .copyright {
+    margin: 30px 25px;
+    p {
+      margin: 0;
+      display: block;
+      font: {
+        family: sans-serif;
+        size: 12px;
+      }
+      text-transform: capitalize;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .banner .banner-logo {
+    height: 30vh;
+  }
+  .banner-text {
+    @include background(auto, 100%);
+    h1 {
+      font-size: 25px;
+      margin-top: -10rem;
+      padding: 0 20px;
+      width: 100%;
+    }
+    h3 {
+      font-size: 10px;
+      width: 90%;
+    }
+  }
+  .feature1 .container {
+    flex-direction: column;
+    .container-sale {
+      width: 100%;
+      margin-bottom: 100px;
+    }
+  }
+  .feature2 {
+    margin-top: -100px;
+    .container-sale1 {
+      width: 100%;
+    }
+  }
+  .feature3 {
+    flex-direction: column;
+    // margin-top: 10px;
+    .label1 {
+      margin-top: 50px;
+    }
+  }
+  .feature4 .grid-container,
+  .feature5 .grid-container {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+  .feature7 {
+    width: 100%;
+  }
+}

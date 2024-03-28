@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text Effect</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,300;1,700&family=Fredoka+One&family=Merriweather&family=Nanum+Gothic:wght@700&family=Raleway&family=Saira:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass and css file/main.css" />
+    <link rel="stylesheet" href="sass and css file/reset.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <div class="header">
+          <p>
+            Send us a message for a quote if you'd like to customize your
+            furniture with us
+          </p>
+        </div>
+      </div>
+      <div class="container2">
+        <img src="images/logo.png" alt="" class="logo" />
+        <div class="header1">
+          <h2 class="dropdown">
+            Categories <i class="fa-solid fa-caret-down"></i>
+          </h2>
+
+          <div class="list">
+            <div class="dropdown-submenu"><a href="#">Home sofa</a></div>
+            <div class="dropdown-submenu"><a href="#">Cabinets</a></div>
+            <div class="dropdown-submenu"><a href="#">Office desks</a></div>
+            <div class="dropdown-submenu"><a href="#">Office chairs</a></div>
+            <div class="dropdown-submenu"><a href="#">Furnitures</a></div>
+          </div>
+        </div>
+
+        <div class="header1">
+          <div class="search">
+            <input type="text" placeholder="Search furnitures and more" />
+            <button type="button">Search</button>
+          </div>
+        </div>
+        <div class="header1">
+          <div class="cart">
+            <button type="button">my cart <span>0</span></button>
+            <button type="button">discover</button>
+          </div>
+        </div>
+      </div>
+      <div class="container3">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li>
+              <a href="#">Material <i class="fa-solid fa-caret-down"></i></a>
+              <div class="dropdown1">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><input type="checkbox" id="circle1" /><label
+                        for="circle1"
+                        >Steel</label
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><input type="checkbox" id="circle2" /><label
+                        for="circle2"
+                        >Textile</label
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><input type="checkbox" id="circle3" /><label
+                        for="circle3"
+                        >Leather</label
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><input type="checkbox" id="circle4" /><label
+                        for="circle4"
+                        >Plastic</label
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><input type="checkbox" id="cirlce5" /><label
+                        for="cirlce5"
+                        >Wood</label
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"
+                >Highlighted products <i class="fa-solid fa-caret-down"></i
+              ></a>
+              <div class="dropdown2">
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><label>Velvet armchair<span>NEW</span></label></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><label>Accent table</label></a>
+                  </li>
+                  <li>
+                    <a href="#"><label>Wood ladder bookcase</label></a>
+                  </li>
+                  <li>
+                    <a href="#"><label>Platform bed and headboard</label></a>
+                  </li>
+                  <li>
+                    <a href="#"><label>Leather bench</label></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><label>Passage bar stool<span>NEW</span></label></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Designers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="banner">
+        <img src="images/header-banner.png" alt="" class="banner-logo" />
+        <div class="banner-text">
+          <h1>lifelong furnishings</h1>
+          <h3>
+            Various Office Furniture and Furnishing Options Schools,
+            restaurants, hotels, and residential settings.
+          </h3>
+        </div>
+      </div>
+
+      <section class="feature1">
+        <p>at this moment</p>
+        <div class="container">
+          <div class="container-sale">
+            <img src="images/pic1.png" alt="" />
+            <p class="p1">500+ items are displayed</p>
+            <p class="p2">Mariana Agency</p>
+            <button type="button">Visit us</button>
+          </div>
+          <div class="container-sale">
+            <img src="images/pic2.png" alt="" />
+            <p class="p1">25% off</p>
+            <p class="p2">Book now</p>
+            <button type="button">Buy now</button>
+          </div>
+          <div class="container-sale">
+            <img src="images/pic3.png" alt="" />
+            <p class="p1">₱100,000 off the entire store</p>
+            <p class="p2">Get your discount</p>
+            <button type="button">Discover</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature2">
+        <p>This is all you'll need</p>
+        <div class="container">
+          <div class="container-sale1">
+            <img src="images/pic4.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-content">
+                <button type="button">Visit Now</button>
+              </div>
+            </div>
+            <div class="label">
+              <h5>Home sofa</h5>
+            </div>
+          </div>
+          <div class="container-sale1">
+            <img src="images/pic5.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-content">
+                <button type="button">Visit Now</button>
+              </div>
+            </div>
+            <div class="label">
+              <h5>Cabinets</h5>
+            </div>
+          </div>
+          <div class="container-sale1">
+            <img src="images/pic6.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-content">
+                <button type="button">Visit Now</button>
+              </div>
+            </div>
+            <div class="label">
+              <h5>Master's bed</h5>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="container-sale1">
+            <img src="images/pic7.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-content">
+                <button type="button">Visit Now</button>
+              </div>
+            </div>
+            <div class="label">
+              <h5>Office chairs</h5>
+            </div>
+          </div>
+          <div class="container-sale1">
+            <img src="images/pic8.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-content">
+                <button type="button">Visit Now</button>
+              </div>
+            </div>
+            <div class="label">
+              <h5>Office desks</h5>
+            </div>
+          </div>
+          <div class="container-sale1">
+            <img src="images/pic9.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-content">
+                <button type="button">Visit Now</button>
+              </div>
+            </div>
+            <div class="label">
+              <h5>Bookshelves</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feature3">
+        <div class="label1">
+          <p>
+            <span>Go get yours now!</span>Don't miss out on the chance to
+            purchase fine furniture at a low cost. Come see us and bring the
+            fashionable one home.
+          </p>
+          <button type="button">Check Now</button>
+        </div>
+        <img src="images/header-banner1.png" alt="" />
+      </section>
+
+      <section class="feature4">
+        <p>New arrivals</p>
+        <div class="grid-container">
+          <div class="grid-content">
+            <img src="images/pic10.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="sale">
+              <p>Sale</p>
+            </div>
+            <div class="container-label">
+              <p>Table patio mosaic<span>₱40,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic11.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="container-label">
+              <p>Gothic desk<span>₱30,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic12.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="sale">
+              <p>Sale</p>
+            </div>
+            <div class="container-label">
+              <p>Ancient chair<span>₱5,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic13.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="container-label">
+              <p>Home bed frame<span>₱40,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic14.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="sale">
+              <p>Sale</p>
+            </div>
+            <div class="container-label">
+              <p>Wooden table<span>₱60,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic15.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="container-label">
+              <p>Flower table<span>₱30,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic16.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="container-label">
+              <p>Bunkbed mattress<span>₱50,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic17.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="sale">
+              <p>Sale</p>
+            </div>
+            <div class="container-label">
+              <p>5-seater sofa<span>₱80,000</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature5">
+        <p>Most popular</p>
+        <div class="grid-container">
+          <div class="grid-content">
+            <img src="images/pic18.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="container-label">
+              <p>Modern sofa<span>₱20,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic19.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="sale">
+              <p>Sale</p>
+            </div>
+            <div class="container-label">
+              <p>Nordic chair<span>₱5,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic20.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="sale">
+              <p>Sale</p>
+            </div>
+            <div class="container-label">
+              <p>Modern chair<span>₱5,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic21.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="sale">
+              <p>Sale</p>
+            </div>
+            <div class="container-label">
+              <p>Wooden shelves<span>₱40,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic22.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="container-label">
+              <p>Standing desk<span>₱20,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic23.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="container-label">
+              <p>Scandinavian table<span>₱10,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic24.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="sale">
+              <p>Sale</p>
+            </div>
+            <div class="container-label">
+              <p>Crystal chandelier<span>₱80,000</span></p>
+            </div>
+          </div>
+          <div class="grid-content">
+            <img src="images/pic25.png" alt="" />
+            <div class="overlay">
+              <div class="overlay-icons">
+                <i class="fa-solid fa-share-nodes"><p>Share</p></i>
+                <i class="fa-solid fa-heart"><p>Like</p></i>
+                <i class="fa-solid fa-cart-shopping"><p>Add</p></i>
+              </div>
+            </div>
+            <div class="container-label">
+              <p>Ceramic vase<span>₱15,000</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature7">
+        <p>Testimonials</p>
+        <div class="main-carousel">
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile1.png" alt="" />
+              <cite class="c1">Anna Mendoza</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile2.png" alt="" />
+              <cite class="c1">John Gonzales</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile3.png" alt="" />
+              <cite class="c1">Kate Go</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile4.png" alt="" />
+              <cite class="c1">Ashley Carlos</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile5.png" alt="" />
+              <cite class="c1">Miguel Agon</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile7.png" alt="" />
+              <cite class="c1">Zac Zacarias</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile6.png" alt="" />
+              <cite class="c1">Gwen Garcia</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile8.png" alt="" />
+              <cite class="c1">Mary Vegas</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+          <div class="carousel-cell">
+            <blockquote>
+              <i class="fa-solid fa-quote-left"></i>
+              <i class="fa-solid fa-quote-right"></i>
+              <div class="b-icons">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti quidem commodi enim voluptas unde maiores porro minima
+                deleniti ipsam adipisci, blanditiis tenetur dolor quasi officia
+                nemo ullam sint. Voluptatibus, accusamus.
+              </p>
+              <img src="images/profile9.png" alt="" />
+              <cite class="c1">Irish Meneses</cite>
+              <cite class="c2">-Customer</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature8">
+        <div class="icons">
+          <div class="icons-container">
+            <i class="fa-solid fa-truck"></i>
+            <p>Free shipping</p>
+            <p class="sub-label">On items above ₱20,000</p>
+          </div>
+          <div class="icons-container">
+            <i class="fa-solid fa-credit-card"></i>
+            <p>No-cost installation</p>
+            <p class="sub-label">On items above ₱40,000</p>
+          </div>
+          <div class="icons-container">
+            <i class="fa-solid fa-store"></i>
+            <p>Get your discount</p>
+            <p class="sub-label">Until end of October</p>
+          </div>
+          <div class="icons-container">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>Mark your calendar</p>
+            <p class="sub-label">Check our latest events</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature6">
+        <p>Touchstones</p>
+        <div class="img-container">
+          <a href="#"><img src="images/pic34.png" alt="" /></a>
+          <a href="#"><img src="images/pic35.png" alt="" /></a>
+          <a href="#"><img src="images/pic36.png" alt="" class="img3" /></a>
+        </div>
+      </section>
+
+      <section class="feature9">
+        <img src="images/sponsor1.png" alt="" />
+        <img src="images/sponsor2.png" alt="" />
+        <img src="images/sponsor3.png" alt="" />
+        <img src="images/sponsor4.png" alt="" />
+        <img src="images/sponsor5.png" alt="" />
+      </section>
+
+      <!-- footer -->
+      <footer>
+        <div class="footer-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+        <div class="footer-div">
+          <p>Mariana Agency</p>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Material</a></li>
+            <li><a href="#">Highlighted products</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Designers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-div">
+          <p>Categories</p>
+          <ul>
+            <li><a href="#">Home sofa</a></li>
+            <li><a href="#">Cabinets</a></li>
+            <li><a href="#">Office desks</a></li>
+            <li><a href="#">Office chair</a></li>
+            <li><a href="#">Furnitures</a></li>
+          </ul>
+        </div>
+        <div class="footer-div">
+          <p>Some links</p>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Terms and conditions</a></li>
+            <li><a href="#">Cookies policy</a></li>
+            <li><a href="#">Activity</a></li>
+          </ul>
+        </div>
+        <div class="footer-div">
+          <p>Highlighted products</p>
+          <ul>
+            <li><a href="#">Velvet armchair</a></li>
+            <li><a href="#">Accent table</a></li>
+            <li><a href="#">Wood ladder bookcase</a></li>
+            <li><a href="#">Platform bed and headboard</a></li>
+            <li><a href="#">Leather bench</a></li>
+            <li><a href="#">Passage bar stool</a></li>
+          </ul>
+        </div>
+        <div class="footer-div">
+          <p>Contact us</p>
+          <ul>
+            <i class="fa-solid fa-envelope"
+              ><a href="#" class="email">marianaagency@gmail.com</a></i
+            >
+            <i class="fa-solid fa-phone"><a href="#">09391111111</a></i>
+            <i class="fa-solid fa-location-dot"
+              ><a href="#" class="location"
+                >979 kundiman street, sampaloc 1009 manila</a
+              ></i
+            >
+            <i class="fa-solid fa-globe"
+              ><a href="#" class="globe">www.marianaagency.com.ph</a></i
+            >
+          </ul>
+        </div>
+        <div class="footer-div">
+          <p>Search products</p>
+          <ul>
+            <div class="search">
+              <input type="email" placeholder="Search" />
+              <button type="button">Search</button>
+            </div>
+          </ul>
+        </div>
+        <div class="footer-div">
+          <p>Newsletter</p>
+          <ul>
+            <div class="newsletter">
+              <input type="email" placeholder="Enter your email" />
+              <button type="button">Submit</button>
+            </div>
+          </ul>
+        </div>
+        <hr />
+        <div class="payment">
+          <p>Payment options</p>
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-paypal"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-cc-stripe"></i>
+        </div>
+        <hr />
+        <div class="copyright">
+          <p>&copy;2022 Mariana agency. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <section class="feature10">
+        <a href="#" class="sctop"><i class="fa-solid fa-chevron-up"></i></a>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script type="text/javascript">
+      $(".main-carousel").flickity({
+        // options
+        cellAlign: "left",
+        wrapAround: true,
+        freeScroll: true,
+        contain: true,
+      });
+    </script>
+
+    <script type="text/javascript">
+      const scrollToTop = document.querySelector(".sctop");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 2000) {
+          scrollToTop.classList.add("active");
+        } else {
+          scrollToTop.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
